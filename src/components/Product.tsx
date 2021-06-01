@@ -1,6 +1,7 @@
 import { FC } from 'react'
-import {Image} from 'react-native'
+import {Image, StyleSheet} from 'react-native'
 import styled from 'styled-components/native'
+import React from 'react'
 
 type TProps = {
     image: any;
@@ -12,7 +13,7 @@ type TProps = {
 export const Product:FC<TProps> = ({image, title, rating, price}) => {
     return (
         <>
-        <Image source={image} />
+        <Image style={styles.image} source={{uri: image}} />
         <StyledTextContainer>
         <StyledTitle>{title}</StyledTitle>
         <StyledRating>{rating}</StyledRating>
@@ -38,3 +39,10 @@ const StyledRating = styled.Text`
 const StyledPrice = styled.Text`
  
 `
+
+const styles = StyleSheet.create({
+    image:{
+        width: 150,
+        height: 150
+    }
+})
