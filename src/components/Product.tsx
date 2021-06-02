@@ -12,24 +12,30 @@ type TProps = {
 
 export const Product:FC<TProps> = ({image, title, rating, price}) => {
     return (
-        <>
-        <Image style={styles.image} source={{uri: image}} />
-        <StyledTextContainer>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledRating>{rating}</StyledRating>
-        <StyledPrice>{price}</StyledPrice>
-        </StyledTextContainer> 
-        </>
+        <StyledContainer>
+            <Image style={styles.image} source={{uri: image}} />
+            <StyledTextContainer>
+                <StyledTitle>{title}</StyledTitle>
+                <StyledRating>{rating} ratings</StyledRating>
+                <StyledPrice>From ${price}</StyledPrice>
+            </StyledTextContainer> 
+        </StyledContainer>
      )
 }
 
 const StyledTextContainer = styled.View`
 flex-direction: column;
+justify-content: space-evenly;
+flex:1;
+padding: 10px;
+`
+
+const StyledContainer = styled.View`
+flex-direction: row;
 `
 
 
 const StyledTitle = styled.Text`
-    
 `
 
 const StyledRating = styled.Text`

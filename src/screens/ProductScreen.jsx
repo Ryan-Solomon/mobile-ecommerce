@@ -5,7 +5,7 @@ import React from 'react'
 
 export const ProductScreen = () => {
     return (
-        <View>
+        <View style={{flex:1}} > 
             {
                 products.map((product) => (
                     <Product 
