@@ -27,6 +27,7 @@ const StyledTextContainer = styled.View`
   flex-direction: column;
   justify-content: space-evenly;
   padding: 12px;
+  flex-shrink: 1;
 `;
 
 const StyledContainer = styled.View`

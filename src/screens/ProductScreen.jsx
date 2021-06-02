@@ -1,4 +1,4 @@
-import { View, FlatList } from "react-native"
+import { FlatList, SafeAreaView } from "react-native"
 import { Product } from "../components/Product"
 import products from '../data/products'
 import React from 'react'
@@ -6,7 +6,7 @@ import product from "../data/product"
 
 export const ProductScreen = () => {
     return (
-        <View style={{flex:1}} > 
+        <SafeAreaView style={{flex:1}} > 
             <FlatList 
             keyExtractor={item => item.id}
             data={products}
@@ -14,6 +14,6 @@ export const ProductScreen = () => {
                 <Product title={item.title} image={item.image} rating={item.ratings} price={item.price}  />
             )}
             />
-        </View>
+        </SafeAreaView>
     )
 }

@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import { ProductScreen } from "./src/screens/ProductScreen";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ProductScreen />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -16,5 +16,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    padding: 15,
   },
 });
