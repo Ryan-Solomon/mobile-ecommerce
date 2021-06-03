@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, SafeAreaView } from "react-native";
-import { ProductScreen } from "./src/screens/ProductScreen";
+import { ImageCarousel } from "./src/components/ImageCarousel";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ProductScreen />
+      <ImageCarousel />
     </SafeAreaView>
   );
 }
