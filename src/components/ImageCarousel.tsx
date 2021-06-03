@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { View, Text, Image } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import products from "../data/products";
 
 export const ImageCarousel = () => {
+  const carouselRef = useRef("carousel");
   const renderItem = ({ item }: { item: any }) => (
     <View
       style={{
@@ -16,13 +17,13 @@ export const ImageCarousel = () => {
       }}
     >
       <Image source={{ uri: item.image }} />
-      <Text>{item.title}</Text>
+      <Text style={{ fontSize: 30 }}>{item.title}</Text>
     </View>
   );
 
   return (
     <Carousel
-      ref="carousel"
+      ref={carouselRef.current}
       data={products}
       renderItem={renderItem}
       sliderWidth={300}
